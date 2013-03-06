@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A033ADE916E708E100753107 /* test-fcgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A033ADDB16E708A600753107 /* test-fcgi.c */; };
 		A0E0C7F616E6DEF9001728FB /* libacgi-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */; };
 		A0E0C7F716E6DEF9001728FB /* libacgi-memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */; };
 		A0E0C7F816E6DEF9001728FB /* libacgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F516E6DEF9001728FB /* libacgi.h */; };
@@ -45,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A033ADDE16E708C200753107 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A0E0C7D416E6D9FA001728FB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A033ADDB16E708A600753107 /* test-fcgi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fcgi.c"; sourceTree = "<group>"; };
+		A033ADE016E708C200753107 /* test.fcgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test.fcgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7A516E6D6AB001728FB /* libacgi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacgi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7AC16E6D7BC001728FB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = acinclude.m4; sourceTree = "<group>"; };
 		A0E0C7AD16E6D7BC001728FB /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
@@ -79,6 +91,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A033ADDD16E708C200753107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0E0C7A216E6D6AB001728FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,6 +141,7 @@
 			children = (
 				A0E0C7A516E6D6AB001728FB /* libacgi.dylib */,
 				A0E0C7D616E6D9FA001728FB /* vars.cgi */,
+				A033ADE016E708C200753107 /* test.fcgi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +173,7 @@
 		A0E0C7CD16E6D7BC001728FB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A033ADDB16E708A600753107 /* test-fcgi.c */,
 				A0E0C7CE16E6D7BC001728FB /* vars-main.c */,
 			);
 			path = src;
@@ -200,6 +221,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A033ADDF16E708C200753107 /* test.fcgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A033ADE616E708C200753107 /* Build configuration list for PBXNativeTarget "test.fcgi" */;
+			buildPhases = (
+				A033ADDC16E708C200753107 /* Sources */,
+				A033ADDD16E708C200753107 /* Frameworks */,
+				A033ADDE16E708C200753107 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test.fcgi;
+			productName = test.fcgi;
+			productReference = A033ADE016E708C200753107 /* test.fcgi */;
+			productType = "com.apple.product-type.tool";
+		};
 		A0E0C7A416E6D6AB001728FB /* acgi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "acgi" */;
@@ -266,6 +304,7 @@
 				A0E0C7A416E6D6AB001728FB /* acgi */,
 				A0E0C7D516E6D9FA001728FB /* vars.cgi */,
 				A0E0C7E516E6DA7F001728FB /* acgi: Git Version */,
+				A033ADDF16E708C200753107 /* test.fcgi */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +327,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A033ADDC16E708C200753107 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A033ADE916E708E100753107 /* test-fcgi.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0E0C7A116E6D6AB001728FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +366,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A033ADE716E708C200753107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A033ADE816E708C200753107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A0E0C7A716E6D6AB001728FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,6 +488,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A033ADE616E708C200753107 /* Build configuration list for PBXNativeTarget "test.fcgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A033ADE716E708C200753107 /* Debug */,
+				A033ADE816E708C200753107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "acgi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

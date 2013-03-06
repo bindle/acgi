@@ -64,7 +64,7 @@ info_TEXINFOS				=
 noinst_LTLIBRARIES			=
 noinst_HEADERS				=
 noinst_PROGRAMS				=
-bin_PROGRAMS				= src/vars.cgi src/vars.fcgi
+bin_PROGRAMS				= src/test.fcgi src/vars.cgi src/vars.fcgi
 bin_SCRIPTS				=
 noinst_SCRIPTS				=
 sbin_SCRIPTS				=
@@ -81,6 +81,13 @@ lib_libacgi_la_LDFLAGS			= -rpath '$(libdir)' \
 lib_libacgi_la_SOURCES			= lib/libacgi.h \
 					  lib/libacgi-memory.c \
 					  lib/libacgi-memory.h
+
+
+# macros for src/test.fcgi
+src_test_fcgi_DEPENDENCIES		= $(lib_LTLIBRARIES) Makefile
+src_test_fcgi_CPPFLAGS			= -DPROGRAM_NAME="\"test.fcgi\"" $(AM_CPPFLAGS)
+src_test_fcgi_SOURCES			= $(noinst_HEADERS) \
+					  src/test-fcgi.c
 
 
 # macros for src/vars.cgi

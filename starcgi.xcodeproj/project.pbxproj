@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "starcgi: Git Version" */;
+			buildPhases = (
+				A0E0C7EB16E6DA9E001728FB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "starcgi: Git Version";
+			productName = "starcgi: Git Version";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		A0E0C7DF16E6DA07001728FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E0C79D16E6D6AB001728FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E0C7A416E6D6AB001728FB;
+			remoteInfo = starcgi;
+		};
+		A0E0C7E916E6DA88001728FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E0C79D16E6D6AB001728FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E0C7E516E6DA7F001728FB;
+			remoteInfo = "starcgi: Git Version";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0E0C7D416E6D9FA001728FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstarcgi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E0C7AC16E6D7BC001728FB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = acinclude.m4; sourceTree = "<group>"; };
+		A0E0C7AD16E6D7BC001728FB /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		A0E0C7B016E6D7BC001728FB /* autotools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = autotools.sh; sourceTree = "<group>"; };
+		A0E0C7B516E6D7BC001728FB /* git-tar-name.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "git-tar-name.txt"; sourceTree = "<group>"; };
+		A0E0C7BB16E6D7BC001728FB /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		A0E0C7BC16E6D7BC001728FB /* configure.ac */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = configure.ac; sourceTree = "<group>"; };
+		A0E0C7BD16E6D7BC001728FB /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		A0E0C7CA16E6D7BC001728FB /* Makefile.am */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; indentWidth = 8; path = Makefile.am; sourceTree = "<group>"; tabWidth = 8; usesTabs = 1; };
+		A0E0C7CB16E6D7BC001728FB /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		A0E0C7CC16E6D7BC001728FB /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A0E0C7CE16E6D7BC001728FB /* vars-main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "vars-main.c"; sourceTree = "<group>"; };
+		A0E0C7D616E6D9FA001728FB /* vars.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vars.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bindletools.xcodeproj; path = bindletools/bindletools.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0E0C7A216E6D6AB001728FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E0C7D316E6D9FA001728FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0E0C79C16E6D6AB001728FB = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7AC16E6D7BC001728FB /* acinclude.m4 */,
+				A0E0C7AD16E6D7BC001728FB /* AUTHORS */,
+				A0E0C7BB16E6D7BC001728FB /* ChangeLog */,
+				A0E0C7BC16E6D7BC001728FB /* configure.ac */,
+				A0E0C7BD16E6D7BC001728FB /* COPYING */,
+				A0E0C7CA16E6D7BC001728FB /* Makefile.am */,
+				A0E0C7CB16E6D7BC001728FB /* NEWS */,
+				A0E0C7CC16E6D7BC001728FB /* README */,
+				A0E0C7AE16E6D7BC001728FB /* build-aux */,
+				A0E0C7E116E6DA11001728FB /* contrib */,
+				A0E0C7BE16E6D7BC001728FB /* include */,
+				A0E0C7C316E6D7BC001728FB /* m4 */,
+				A0E0C7CD16E6D7BC001728FB /* src */,
+				A0E0C7A616E6D6AB001728FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0E0C7A616E6D6AB001728FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */,
+				A0E0C7D616E6D9FA001728FB /* vars.cgi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0E0C7AE16E6D7BC001728FB /* build-aux */ = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7B016E6D7BC001728FB /* autotools.sh */,
+				A0E0C7B516E6D7BC001728FB /* git-tar-name.txt */,
+			);
+			path = "build-aux";
+			sourceTree = "<group>";
+		};
+		A0E0C7BE16E6D7BC001728FB /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A0E0C7C316E6D7BC001728FB /* m4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = m4;
+			sourceTree = "<group>";
+		};
+		A0E0C7CD16E6D7BC001728FB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7CE16E6D7BC001728FB /* vars-main.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A0E0C7E116E6DA11001728FB /* contrib */ = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */,
+			);
+			path = contrib;
+			sourceTree = "<group>";
+		};
+		A0E0C7E316E6DA2F001728FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A0E0C7A316E6D6AB001728FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A0E0C7A416E6D6AB001728FB /* starcgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "starcgi" */;
+			buildPhases = (
+				A0E0C7A116E6D6AB001728FB /* Sources */,
+				A0E0C7A216E6D6AB001728FB /* Frameworks */,
+				A0E0C7A316E6D6AB001728FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0E0C7EA16E6DA88001728FB /* PBXTargetDependency */,
+			);
+			name = starcgi;
+			productName = starcgi;
+			productReference = A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		A0E0C7D516E6D9FA001728FB /* vars.cgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0E0C7DC16E6D9FA001728FB /* Build configuration list for PBXNativeTarget "vars.cgi" */;
+			buildPhases = (
+				A0E0C7D216E6D9FA001728FB /* Sources */,
+				A0E0C7D316E6D9FA001728FB /* Frameworks */,
+				A0E0C7D416E6D9FA001728FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0E0C7E016E6DA07001728FB /* PBXTargetDependency */,
+			);
+			name = vars.cgi;
+			productName = vars.cgi;
+			productReference = A0E0C7D616E6D9FA001728FB /* vars.cgi */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0E0C79D16E6D6AB001728FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bindle Binaries";
+			};
+			buildConfigurationList = A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "starcgi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A0E0C79C16E6D6AB001728FB;
+			productRefGroup = A0E0C7A616E6D6AB001728FB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A0E0C7E316E6DA2F001728FB /* Products */;
+					ProjectRef = A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A0E0C7A416E6D6AB001728FB /* starcgi */,
+				A0E0C7D516E6D9FA001728FB /* vars.cgi */,
+				A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0E0C7EB16E6DA9E001728FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# update git repository\n#cd `git rev-parse --show-toplevel`\n#git submodule init\n#git submodule sync\n#git submodule update --recursive\n\n# update version files\ncontrib/bindletools/build-aux/git-package-version.sh auto";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0E0C7A116E6D6AB001728FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E0C7D216E6D9FA001728FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0E0C7E016E6DA07001728FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E0C7A416E6D6AB001728FB /* starcgi */;
+			targetProxy = A0E0C7DF16E6DA07001728FB /* PBXContainerItemProxy */;
+		};
+		A0E0C7EA16E6DA88001728FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */;
+			targetProxy = A0E0C7E916E6DA88001728FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A0E0C7A716E6D6AB001728FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A0E0C7A816E6D6AB001728FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A0E0C7AA16E6D6AB001728FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0E0C7AB16E6D6AB001728FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A0E0C7DD16E6D9FA001728FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0E0C7DE16E6D9FA001728FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A0E0C7E716E6DA7F001728FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0E0C7E816E6DA7F001728FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "starcgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E0C7A716E6D6AB001728FB /* Debug */,
+				A0E0C7A816E6D6AB001728FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "starcgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E0C7AA16E6D6AB001728FB /* Debug */,
+				A0E0C7AB16E6D6AB001728FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A0E0C7DC16E6D9FA001728FB /* Build configuration list for PBXNativeTarget "vars.cgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E0C7DD16E6D9FA001728FB /* Debug */,
+				A0E0C7DE16E6D9FA001728FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "starcgi: Git Version" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E0C7E716E6DA7F001728FB /* Debug */,
+				A0E0C7E816E6DA7F001728FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0E0C79D16E6D6AB001728FB /* Project object */;
+}

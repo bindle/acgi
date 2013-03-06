@@ -108,30 +108,38 @@ int main(int argc, char * argv[])
    fflush(fs);
 
    fds[0].fd = input;
+   fds[0].events = POLLERR|POLLHUP|POLLIN;
 
-   ret = poll(fds, 1, 1000000);
+   while ((ret = poll(fds, 1, -1)) != -1)
+   {
+      // accept new connection
+      sal = sizeof(sa);
+      if ((s = accept(input, (struct sockaddr *)&sa, &sal)) == -1)
+      {
+         fprintf(fs, "accept(): %s", strerror(errno));
+         close(fd);
+         fclose(fs);
+         return(0);
+      };
+
+      // read from socket
+      while((len = read(s, buff, 4096)) > 0)
+      {
+         write(fd, str, strlen(str));
+         write(fd, buff, len);
+      };
+
+      // closes socket
+      len = snprintf(buff, 4096, "Content-Type: text/plain;charset=us-ascii\n\nHello World\n");
+      write(s, buff, len);
+      close(s);
+   };
    if (ret == -1)
    {
       fprintf(fs, "poll(): %s", strerror(errno));
       close(fd);
       fclose(fs);
       return(0);
-   };
-
-   sal = sizeof(sa);
-   if ((s = accept(input, (struct sockaddr *)&sa, &sal)) == -1)
-   {
-      fprintf(fs, "accept(): %s", strerror(errno));
-      close(fd);
-      fclose(fs);
-      return(0);
-   };
-
-   // stdin
-   while((len = read(input, buff, 4096)) > 0)
-   {
-      write(fd, str, strlen(str));
-      write(fd, buff, len);
    };
 
    close(fd);

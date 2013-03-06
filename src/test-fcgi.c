@@ -110,6 +110,13 @@ int main(int argc, char * argv[])
    fds[0].fd = input;
 
    ret = poll(fds, 1, 1000000);
+   if (ret == -1)
+   {
+      fprintf(fs, "poll(): %s", strerror(errno));
+      close(fd);
+      fclose(fs);
+      return(0);
+   };
 
    sal = sizeof(sa);
    if ((s = accept(input, (struct sockaddr *)&sa, &sal)) == -1)

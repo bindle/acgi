@@ -105,7 +105,7 @@ int main(int argc, char * argv[])
    fflush(fs);
 
    sal = sizeof(sa);
-   if ((s = accept(input, &sa, &sal)) == -1)
+   if ((s = accept(input, (struct sockaddr *)&sa, &sal)) == -1)
    {
       fprintf(fs, "accept(): %s", strerror(errno));
       close(fd);

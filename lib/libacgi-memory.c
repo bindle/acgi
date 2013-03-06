@@ -1,5 +1,5 @@
 /*
- *  *CGI Library
+ *  AsteriskCGI Library
  *  Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_START@
@@ -34,35 +34,6 @@
 /**
  *  Displays variables available to the CGIs.
  */
-#ifndef _STARCGI_H
-#define _STARCGI_H 1
-
-///////////////
-//           //
-//  Headers  //
-//           //
-///////////////
-
-#include <inttypes.h>
-
-#include <starcgi.h>
 
 
-//////////////////
-//              //
-//  Data Types  //
-//              //
-//////////////////
-
-struct starcgi
-{
-};
-
-
-struct starcgi_session
-{
-};
-
-
-#endif
-/* end of header */
+/* end of source */

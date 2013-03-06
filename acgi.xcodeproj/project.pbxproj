@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */ = {
+		A0E0C7E516E6DA7F001728FB /* acgi: Git Version */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "starcgi: Git Version" */;
+			buildConfigurationList = A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "acgi: Git Version" */;
 			buildPhases = (
 				A0E0C7EB16E6DA9E001728FB /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "starcgi: Git Version";
-			productName = "starcgi: Git Version";
+			name = "acgi: Git Version";
+			productName = "acgi: Git Version";
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A0E0C7F616E6DEF9001728FB /* libstarcgi-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */; };
-		A0E0C7F716E6DEF9001728FB /* libstarcgi-memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */; };
-		A0E0C7F816E6DEF9001728FB /* libstarcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F516E6DEF9001728FB /* libstarcgi.h */; };
-		A0E0C7FC16E6E0B1001728FB /* starcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7FB16E6E0B1001728FB /* starcgi.h */; };
+		A0E0C7F616E6DEF9001728FB /* libacgi-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */; };
+		A0E0C7F716E6DEF9001728FB /* libacgi-memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */; };
+		A0E0C7F816E6DEF9001728FB /* libacgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F516E6DEF9001728FB /* libacgi.h */; };
+		A0E0C7FC16E6E0B1001728FB /* acgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7FB16E6E0B1001728FB /* acgi.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +33,14 @@
 			containerPortal = A0E0C79D16E6D6AB001728FB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A0E0C7A416E6D6AB001728FB;
-			remoteInfo = starcgi;
+			remoteInfo = acgi;
 		};
 		A0E0C7E916E6DA88001728FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0E0C79D16E6D6AB001728FB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A0E0C7E516E6DA7F001728FB;
-			remoteInfo = "starcgi: Git Version";
+			remoteInfo = "acgi: Git Version";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,7 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstarcgi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E0C7A516E6D6AB001728FB /* libacgi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacgi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7AC16E6D7BC001728FB /* acinclude.m4 */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = acinclude.m4; sourceTree = "<group>"; };
 		A0E0C7AD16E6D7BC001728FB /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		A0E0C7B016E6D7BC001728FB /* autotools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = autotools.sh; sourceTree = "<group>"; };
@@ -71,11 +71,11 @@
 		A0E0C7CE16E6D7BC001728FB /* vars-main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "vars-main.c"; sourceTree = "<group>"; };
 		A0E0C7D616E6D9FA001728FB /* vars.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vars.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bindletools.xcodeproj; path = bindletools/bindletools.xcodeproj; sourceTree = "<group>"; };
-		A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libstarcgi-memory.c"; sourceTree = "<group>"; };
-		A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libstarcgi-memory.h"; sourceTree = "<group>"; };
-		A0E0C7F516E6DEF9001728FB /* libstarcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libstarcgi.h; sourceTree = "<group>"; };
-		A0E0C7FA16E6DF82001728FB /* libstarcgi.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libstarcgi.sym; sourceTree = "<group>"; };
-		A0E0C7FB16E6E0B1001728FB /* starcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starcgi.h; sourceTree = "<group>"; };
+		A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-memory.c"; sourceTree = "<group>"; };
+		A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-memory.h"; sourceTree = "<group>"; };
+		A0E0C7F516E6DEF9001728FB /* libacgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libacgi.h; sourceTree = "<group>"; };
+		A0E0C7FA16E6DF82001728FB /* libacgi.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libacgi.sym; sourceTree = "<group>"; };
+		A0E0C7FB16E6E0B1001728FB /* acgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = acgi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 		A0E0C7A616E6D6AB001728FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */,
+				A0E0C7A516E6D6AB001728FB /* libacgi.dylib */,
 				A0E0C7D616E6D9FA001728FB /* vars.cgi */,
 			);
 			name = Products;
@@ -138,7 +138,7 @@
 		A0E0C7BE16E6D7BC001728FB /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A0E0C7FB16E6E0B1001728FB /* starcgi.h */,
+				A0E0C7FB16E6E0B1001728FB /* acgi.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -176,10 +176,10 @@
 		A0E0C7F216E6DEF9001728FB /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				A0E0C7FA16E6DF82001728FB /* libstarcgi.sym */,
-				A0E0C7F516E6DEF9001728FB /* libstarcgi.h */,
-				A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */,
-				A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */,
+				A0E0C7FA16E6DF82001728FB /* libacgi.sym */,
+				A0E0C7F516E6DEF9001728FB /* libacgi.h */,
+				A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */,
+				A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -191,18 +191,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E0C7F716E6DEF9001728FB /* libstarcgi-memory.h in Headers */,
-				A0E0C7F816E6DEF9001728FB /* libstarcgi.h in Headers */,
-				A0E0C7FC16E6E0B1001728FB /* starcgi.h in Headers */,
+				A0E0C7F716E6DEF9001728FB /* libacgi-memory.h in Headers */,
+				A0E0C7F816E6DEF9001728FB /* libacgi.h in Headers */,
+				A0E0C7FC16E6E0B1001728FB /* acgi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A0E0C7A416E6D6AB001728FB /* starcgi */ = {
+		A0E0C7A416E6D6AB001728FB /* acgi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "starcgi" */;
+			buildConfigurationList = A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "acgi" */;
 			buildPhases = (
 				A0E0C7A116E6D6AB001728FB /* Sources */,
 				A0E0C7A216E6D6AB001728FB /* Frameworks */,
@@ -213,9 +213,9 @@
 			dependencies = (
 				A0E0C7EA16E6DA88001728FB /* PBXTargetDependency */,
 			);
-			name = starcgi;
-			productName = starcgi;
-			productReference = A0E0C7A516E6D6AB001728FB /* libstarcgi.dylib */;
+			name = acgi;
+			productName = acgi;
+			productReference = A0E0C7A516E6D6AB001728FB /* libacgi.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		A0E0C7D516E6D9FA001728FB /* vars.cgi */ = {
@@ -245,7 +245,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Bindle Binaries";
 			};
-			buildConfigurationList = A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "starcgi" */;
+			buildConfigurationList = A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "acgi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -263,9 +263,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				A0E0C7A416E6D6AB001728FB /* starcgi */,
+				A0E0C7A416E6D6AB001728FB /* acgi */,
 				A0E0C7D516E6D9FA001728FB /* vars.cgi */,
-				A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */,
+				A0E0C7E516E6DA7F001728FB /* acgi: Git Version */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E0C7F616E6DEF9001728FB /* libstarcgi-memory.c in Sources */,
+				A0E0C7F616E6DEF9001728FB /* libacgi-memory.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +308,12 @@
 /* Begin PBXTargetDependency section */
 		A0E0C7E016E6DA07001728FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0E0C7A416E6D6AB001728FB /* starcgi */;
+			target = A0E0C7A416E6D6AB001728FB /* acgi */;
 			targetProxy = A0E0C7DF16E6DA07001728FB /* PBXContainerItemProxy */;
 		};
 		A0E0C7EA16E6DA88001728FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0E0C7E516E6DA7F001728FB /* starcgi: Git Version */;
+			target = A0E0C7E516E6DA7F001728FB /* acgi: Git Version */;
 			targetProxy = A0E0C7E916E6DA88001728FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "starcgi" */ = {
+		A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "acgi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0E0C7A716E6D6AB001728FB /* Debug */,
@@ -434,13 +434,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "starcgi" */ = {
+		A0E0C7A916E6D6AB001728FB /* Build configuration list for PBXNativeTarget "acgi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0E0C7AA16E6D6AB001728FB /* Debug */,
 				A0E0C7AB16E6D6AB001728FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0E0C7DC16E6D9FA001728FB /* Build configuration list for PBXNativeTarget "vars.cgi" */ = {
 			isa = XCConfigurationList;
@@ -449,14 +450,16 @@
 				A0E0C7DE16E6D9FA001728FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "starcgi: Git Version" */ = {
+		A0E0C7E616E6DA7F001728FB /* Build configuration list for PBXAggregateTarget "acgi: Git Version" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0E0C7E716E6DA7F001728FB /* Debug */,
 				A0E0C7E816E6DA7F001728FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

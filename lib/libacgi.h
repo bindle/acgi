@@ -31,8 +31,11 @@
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
-#ifndef _STARCGI_H
-#define _STARCGI_H 1
+/**
+ *  Displays variables available to the CGIs.
+ */
+#ifndef _LIBACGI_H
+#define _LIBACGI_H 1
 
 ///////////////
 //           //
@@ -42,6 +45,8 @@
 
 #include <inttypes.h>
 
+#include <acgi.h>
+
 
 //////////////////
 //              //
@@ -49,8 +54,14 @@
 //              //
 //////////////////
 
-typedef struct starcgi CGI;
-typedef struct starcgi_session CGISession;
+struct acgi
+{
+};
+
+
+struct acgi_session
+{
+};
 
 
 #endif

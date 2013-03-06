@@ -1,5 +1,5 @@
 #
-#   *CGI Library
+#   AsteriskCGI Library
 #   Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.
 #
 #   @BINDLE_BINARIES_BSD_LICENSE_START@

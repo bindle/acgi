@@ -1,5 +1,5 @@
 #
-#   *CGI Library
+#   AsteriskCGI Library
 #   Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.
 #
 #   @BINDLE_BINARIES_BSD_LICENSE_START@
@@ -33,19 +33,19 @@
 #
 #   Build:
 #      CFLAGS="-g -O2 -W -Wall -Werror -I../include"
-#      LDFLAGS="-g -O2 -export-symbols libstarcgi.sym -rpath /usr/local/lib"
+#      LDFLAGS="-g -O2 -export-symbols libacgi.sym -rpath /usr/local/lib"
 #      export CFLAGS LDFLAGS
 #
-#      libtool --mode=compile gcc ${CFLAGS}  -c libstarcgi-memory.c
-#      libtool --mode=link    gcc ${LDFLAGS} -o libstarcgi.la \
-#              libstarcgi-memory.lo
+#      libtool --mode=compile gcc ${CFLAGS}  -c libacgi-memory.c
+#      libtool --mode=link    gcc ${LDFLAGS} -o libacgi.la \
+#              libacgi-memory.lo
 #
 #   Install:
-#      libtool --mode=install install -c libstarcgi.la /usr/local/lib/libstarcgi.la
+#      libtool --mode=install install -c libacgi.la /usr/local/lib/libacgi.la
 #
 #   Uninstall:
-#      libtool --mode=uninstall rm -f /usr/local/lib/libstarcgi.la
+#      libtool --mode=uninstall rm -f /usr/local/lib/libacgi.la
 #
 #   Clean:
-#      libtool --mode=clean rm -f libstarcgi.la libstarcgi.lo
+#      libtool --mode=clean rm -f libacgi.la libacgi.lo
 # end of symbol export file

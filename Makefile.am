@@ -1,5 +1,5 @@
 #
-#   *CGI Library
+#   AsteriskCGI Library
 #   Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.
 #
 #   @BINDLE_BINARIES_BSD_LICENSE_START@
@@ -58,7 +58,7 @@ check_PROGRAMS				=
 pkgdata_DATA				=
 doc_DATA				=
 include_HEADERS				=
-lib_LTLIBRARIES				= lib/libstarcgi.la
+lib_LTLIBRARIES				= lib/libacgi.la
 man_MANS				=
 info_TEXINFOS				=
 noinst_LTLIBRARIES			=
@@ -71,16 +71,16 @@ sbin_SCRIPTS				=
 
 
 # macros for lib/libotadm.la
-lib_libstarcgi_la_DEPENDENCIES		= Makefile lib/libstarcgi.sym
-lib_libstarcgi_la_CFLAGS		= $(AM_CFLAGS)
-lib_libstarcgi_la_LIBADD		= $(AM_LIBS)
-lib_libstarcgi_la_LDFLAGS		= -rpath '$(libdir)' \
+lib_libacgi_la_DEPENDENCIES		= Makefile lib/libacgi.sym
+lib_libacgi_la_CFLAGS			= $(AM_CFLAGS)
+lib_libacgi_la_LIBADD			= $(AM_LIBS)
+lib_libacgi_la_LDFLAGS			= -rpath '$(libdir)' \
 					  -version-info $(LIB_VERSION_INFO) \
 					  $(AM_LDFLAGS)
-					  -export-symbols $(srcdir)/lib/libstarcgi.sym
-lib_libstarcgi_la_SOURCES		= lib/libstarcgi.h \
-					  lib/libstarcgi-memory.c \
-					  lib/libstarcgi-memory.h
+					  -export-symbols $(srcdir)/lib/libacgi.sym
+lib_libacgi_la_SOURCES			= lib/libacgi.h \
+					  lib/libacgi-memory.c \
+					  lib/libacgi-memory.h
 
 
 # macros for src/vars.cgi

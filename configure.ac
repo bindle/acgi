@@ -1,5 +1,5 @@
 #
-#   *CGI Library
+#   AsteriskCGI Library
 #   Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.
 #
 #   @BINDLE_BINARIES_BSD_LICENSE_START@
@@ -38,7 +38,7 @@ AC_PREREQ([2.65])
 
 AC_COPYRIGHT([Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>.])
 AC_REVISION(0.0)
-AC_INIT([*CGI Library],[0.0],[david@syzdek.net],[starcgi])
+AC_INIT([AsteriskCGI Library],[0.0],[david@syzdek.net],[acgi])
 
 AC_SUBST([RELEASE_MONTH],["September 2012"])
 AC_SUBST([PACKAGE_COPYRIGHT], ["Copyright (c) 2013 Bindle Binaries <legal@bindlebinaries.com>."])

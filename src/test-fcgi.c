@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
+#include <poll.h>
 
 extern char **environ;
 
@@ -41,6 +42,8 @@ int main(int argc, char * argv[])
    //int         err;
    //int         length;
    //int         type;
+   struct pollfd fds[2];
+   int           ret;
    const char * str = "--- STDIN ---\n";
    union {
       struct sockaddr_in6 in6;
@@ -103,6 +106,10 @@ int main(int argc, char * argv[])
    //};
 
    fflush(fs);
+
+   fds[0].fd = input;
+
+   ret = poll(fds, 1, 1000000);
 
    sal = sizeof(sa);
    if ((s = accept(input, (struct sockaddr *)&sa, &sal)) == -1)

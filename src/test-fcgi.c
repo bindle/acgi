@@ -29,6 +29,7 @@ int cgi_cmp_str(const char ** aa, const char ** bb)
 int main(int argc, char * argv[])
 {
    int         i;
+   int         s;
    int         max;
    int         input;
    int         fd;
@@ -102,19 +103,20 @@ int main(int argc, char * argv[])
    //};
 
    fflush(fs);
- 
-i = 0xdeadbeef;
+
+   if ((s = accept(input, &sa, sizeof(sa))) == -1)
+   {
+      fprintf(fs, "accept(): %s", strerror(errno));
+      close(fd);
+      fclose(fs);
+      return(0);
+   };
 
    // stdin
-   while(1)
+   while((len = read(input, buff, 4096)) > 0)
    {
-      write(fd, &i, sizeof(i));
-      if ((len = read(input, buff, 4096)) > 0)
-      {
-         write(fd, str, strlen(str));
-         write(fd, buff, len);
-      };
-      sleep(1);
+      write(fd, str, strlen(str));
+      write(fd, buff, len);
    };
 
    close(fd);

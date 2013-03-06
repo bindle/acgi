@@ -47,7 +47,7 @@ AM_LDFLAGS				=
 AM_CFLAGS				= -O2 $(CFLAGS_WARNINGS)
 AM_CXXFLAGS				= -O2 @AM_CXXFLAGS@
 AM_OBJCFLAGS				= -O2 @AM_OBJCFLAGS@
-AM_CPPFLAGS				= -O2 -DHAVE_CONFIG_H=1 -I$(top_srcdir) -DPKGDATADIR=\"$(pkgdatadir)\"
+AM_CPPFLAGS				= -O2 -DHAVE_CONFIG_H=1 -I$(top_srcdir) -I$(top_srcdir)/include -DPKGDATADIR=\"$(pkgdatadir)\"
 ACLOCAL_AMFLAGS				= -I m4 -I contrib/bindletools/m4 -W all -W error
 AM_MAKEINFOFLAGS                        = --no-split
 DEFS					=
@@ -58,22 +58,42 @@ check_PROGRAMS				=
 pkgdata_DATA				=
 doc_DATA				=
 include_HEADERS				=
-lib_LTLIBRARIES				=
+lib_LTLIBRARIES				= lib/libstarcgi.la
 man_MANS				=
 info_TEXINFOS				=
 noinst_LTLIBRARIES			=
 noinst_HEADERS				=
 noinst_PROGRAMS				=
-bin_PROGRAMS				= src/vars.cgi
+bin_PROGRAMS				= src/vars.cgi src/vars.fcgi
 bin_SCRIPTS				=
 noinst_SCRIPTS				=
 sbin_SCRIPTS				=
+
+
+# macros for lib/libotadm.la
+lib_libstarcgi_la_DEPENDENCIES		= Makefile lib/libstarcgi.sym
+lib_libstarcgi_la_CFLAGS		= $(AM_CFLAGS)
+lib_libstarcgi_la_LIBADD		= $(AM_LIBS)
+lib_libstarcgi_la_LDFLAGS		= -rpath '$(libdir)' \
+					  -version-info $(LIB_VERSION_INFO) \
+					  $(AM_LDFLAGS)
+					  -export-symbols $(srcdir)/lib/libstarcgi.sym
+lib_libstarcgi_la_SOURCES		= lib/libstarcgi.h \
+					  lib/libstarcgi-memory.c \
+					  lib/libstarcgi-memory.h
 
 
 # macros for src/vars.cgi
 src_vars_cgi_DEPENDENCIES		= $(lib_LTLIBRARIES) Makefile
 src_vars_cgi_CPPFLAGS			= -DPROGRAM_NAME="\"vars.cgi\"" $(AM_CPPFLAGS)
 src_vars_cgi_SOURCES			= $(noinst_HEADERS) \
+					  src/vars-main.c
+
+
+# macros for src/vars.fcgi
+src_vars_fcgi_DEPENDENCIES		= $(lib_LTLIBRARIES) Makefile
+src_vars_fcgi_CPPFLAGS			= -DPROGRAM_NAME="\"vars.fcgi\"" $(AM_CPPFLAGS)
+src_vars_fcgi_SOURCES			= $(noinst_HEADERS) \
 					  src/vars-main.c
 
 
@@ -123,7 +143,7 @@ install-data-local:
 
 uninstall-local:
 
-clean-local: checkclean
+clean-local:
 
 distclean-local:
 	rm -fR $(pkgdata_DATA)

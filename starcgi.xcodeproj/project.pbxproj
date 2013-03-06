@@ -20,6 +20,13 @@
 		};
 /* End PBXAggregateTarget section */
 
+/* Begin PBXBuildFile section */
+		A0E0C7F616E6DEF9001728FB /* libstarcgi-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */; };
+		A0E0C7F716E6DEF9001728FB /* libstarcgi-memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */; };
+		A0E0C7F816E6DEF9001728FB /* libstarcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F516E6DEF9001728FB /* libstarcgi.h */; };
+		A0E0C7FC16E6E0B1001728FB /* starcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7FB16E6E0B1001728FB /* starcgi.h */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A0E0C7DF16E6DA07001728FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -64,6 +71,11 @@
 		A0E0C7CE16E6D7BC001728FB /* vars-main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "vars-main.c"; sourceTree = "<group>"; };
 		A0E0C7D616E6D9FA001728FB /* vars.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vars.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bindletools.xcodeproj; path = bindletools/bindletools.xcodeproj; sourceTree = "<group>"; };
+		A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libstarcgi-memory.c"; sourceTree = "<group>"; };
+		A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libstarcgi-memory.h"; sourceTree = "<group>"; };
+		A0E0C7F516E6DEF9001728FB /* libstarcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libstarcgi.h; sourceTree = "<group>"; };
+		A0E0C7FA16E6DF82001728FB /* libstarcgi.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libstarcgi.sym; sourceTree = "<group>"; };
+		A0E0C7FB16E6E0B1001728FB /* starcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starcgi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 				A0E0C7AE16E6D7BC001728FB /* build-aux */,
 				A0E0C7E116E6DA11001728FB /* contrib */,
 				A0E0C7BE16E6D7BC001728FB /* include */,
+				A0E0C7F216E6DEF9001728FB /* lib */,
 				A0E0C7C316E6D7BC001728FB /* m4 */,
 				A0E0C7CD16E6D7BC001728FB /* src */,
 				A0E0C7A616E6D6AB001728FB /* Products */,
@@ -125,6 +138,7 @@
 		A0E0C7BE16E6D7BC001728FB /* include */ = {
 			isa = PBXGroup;
 			children = (
+				A0E0C7FB16E6E0B1001728FB /* starcgi.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -159,6 +173,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A0E0C7F216E6DEF9001728FB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0E0C7FA16E6DF82001728FB /* libstarcgi.sym */,
+				A0E0C7F516E6DEF9001728FB /* libstarcgi.h */,
+				A0E0C7F316E6DEF9001728FB /* libstarcgi-memory.c */,
+				A0E0C7F416E6DEF9001728FB /* libstarcgi-memory.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -166,6 +191,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E0C7F716E6DEF9001728FB /* libstarcgi-memory.h in Headers */,
+				A0E0C7F816E6DEF9001728FB /* libstarcgi.h in Headers */,
+				A0E0C7FC16E6E0B1001728FB /* starcgi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E0C7F616E6DEF9001728FB /* libstarcgi-memory.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

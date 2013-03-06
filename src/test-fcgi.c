@@ -104,7 +104,8 @@ int main(int argc, char * argv[])
 
    fflush(fs);
 
-   if ((s = accept(input, &sa, sizeof(sa))) == -1)
+   sal = sizeof(sa);
+   if ((s = accept(input, &sa, &sal)) == -1)
    {
       fprintf(fs, "accept(): %s", strerror(errno));
       close(fd);

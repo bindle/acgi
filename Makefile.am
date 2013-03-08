@@ -43,7 +43,7 @@ DIST_SUBDIRS				=
 
 # Global flags
 AM_LIBS					=
-AM_LDFLAGS				=
+AM_LDFLAGS				= -Llib
 AM_CFLAGS				= -O2 $(CFLAGS_WARNINGS)
 AM_CXXFLAGS				= -O2 @AM_CXXFLAGS@
 AM_OBJCFLAGS				= -O2 @AM_OBJCFLAGS@
@@ -57,7 +57,7 @@ DEFS					=
 check_PROGRAMS				=
 pkgdata_DATA				=
 doc_DATA				=
-include_HEADERS				=
+include_HEADERS				= include/acgi.h
 lib_LTLIBRARIES				= lib/libacgi.la
 man_MANS				=
 info_TEXINFOS				=
@@ -78,9 +78,34 @@ lib_libacgi_la_LDFLAGS			= -rpath '$(libdir)' \
 					  -version-info $(LIB_VERSION_INFO) \
 					  $(AM_LDFLAGS)
 					  -export-symbols $(srcdir)/lib/libacgi.sym
-lib_libacgi_la_SOURCES			= lib/libacgi.h \
-					  lib/libacgi-memory.c \
-					  lib/libacgi-memory.h
+lib_libacgi_la_SOURCES			= lib/libacgi.c \
+ 					  lib/libacgi.h \
+					  lib/libacgi-hash.c \
+					  lib/libacgi-hash.h \
+					  lib/libacgi-error.c \
+					  lib/libacgi-error.h \
+					  lib/libacgi-parse-argv.c \
+					  lib/libacgi-parse-argv.h \
+					  lib/libacgi-parse-cookies.c \
+					  lib/libacgi-parse-cookies.h \
+					  lib/libacgi-parse-environ.c \
+					  lib/libacgi-parse-environ.h \
+					  lib/libacgi-parse-get.c \
+					  lib/libacgi-parse-get.h \
+					  lib/libacgi-parse-post.c \
+					  lib/libacgi-parse-post.h \
+					  lib/libacgi-poll-cgi.c \
+					  lib/libacgi-poll-cgi.h \
+					  lib/libacgi-poll-fcgi.c \
+					  lib/libacgi-poll-fcgi.h \
+					  lib/libacgi-poll-scgi.c \
+					  lib/libacgi-poll-scgi.h \
+					  lib/libacgi-session.c \
+					  lib/libacgi-session.h \
+					  lib/libacgi-string.c \
+					  lib/libacgi-string.h \
+					  lib/libacgi-value.c \
+					  lib/libacgi-value.h
 
 
 # macros for src/test.fcgi
@@ -93,6 +118,8 @@ src_test_fcgi_SOURCES			= $(noinst_HEADERS) \
 # macros for src/vars.cgi
 src_vars_cgi_DEPENDENCIES		= $(lib_LTLIBRARIES) Makefile
 src_vars_cgi_CPPFLAGS			= -DPROGRAM_NAME="\"vars.cgi\"" $(AM_CPPFLAGS)
+src_vars_cgi_LDFLAGS			= $(AM_LDFLAGS) -static
+src_vars_cgi_LDADD			= lib/libacgi.la
 src_vars_cgi_SOURCES			= $(noinst_HEADERS) \
 					  src/vars-main.c
 
@@ -100,6 +127,8 @@ src_vars_cgi_SOURCES			= $(noinst_HEADERS) \
 # macros for src/vars.fcgi
 src_vars_fcgi_DEPENDENCIES		= $(lib_LTLIBRARIES) Makefile
 src_vars_fcgi_CPPFLAGS			= -DPROGRAM_NAME="\"vars.fcgi\"" $(AM_CPPFLAGS)
+src_vars_fcgi_LDFLAGS			= $(AM_LDFLAGS) -static
+src_vars_fcgi_LDADD			= lib/libacgi.la
 src_vars_fcgi_SOURCES			= $(noinst_HEADERS) \
 					  src/vars-main.c
 
@@ -118,7 +147,10 @@ EXTRA_DIST				= build-aux/git-tar-name.txt \
 					  contrib/bindletools/build-aux/makefile-subst.am \
 					  contrib/bindletools/build-aux/makefile-version.am \
 					  contrib/bindletools/m4/bindle-gcc.m4 \
-					  contrib/bindletools/m4/bindle-git.m4 
+					  contrib/bindletools/m4/bindle-git.m4 \
+					  include/git-package-version.txt \
+					  include/git-package-version.h \
+					  lib/libacgi.sym
 CLEANFILES				= \
 					  $(builddir)/a.out   $(srcdir)/a.out \
 					  $(builddir)/*/a.out $(srcdir)/*/a.out \

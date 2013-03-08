@@ -32,8 +32,29 @@
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
 /**
- *  Displays variables available to the CGIs.
+ *
  */
+#ifndef _LIB_LIBACGI_PARSE_ARGV_H
+#define _LIB_LIBACGI_PARSE_ARGV_H 1
 
 
-/* end of source */
+///////////////
+//           //
+//  Headers  //
+//           //
+///////////////
+
+#include "libacgi.h"
+
+
+//////////////////
+//              //
+//  Prototypes  //
+//              //
+//////////////////
+
+int acgi_parse_argv(ACGI * cgi, int argc, char * argv[]);
+
+
+#endif
+/* end of header */

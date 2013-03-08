@@ -48,4 +48,10 @@
 #
 #   Clean:
 #      libtool --mode=clean rm -f libacgi.la libacgi.lo
+acgi_accept
+acgi_err2str
+acgi_errcode
+acgi_free
+acgi_initialize
+acgi_type
 # end of symbol export file

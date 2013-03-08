@@ -34,18 +34,49 @@
 /**
  *  Displays variables available to the CGIs.
  */
-#ifndef _LIBACGI_H
-#define _LIBACGI_H 1
+#ifndef _LIB_LIBACGI_H
+#define _LIB_LIBACGI_H 1
 
 ///////////////
 //           //
 //  Headers  //
 //           //
 ///////////////
+#ifdef PMARK
+#pragma mark - Headers
+#endif
 
+#include <sys/types.h>
 #include <inttypes.h>
+#include <poll.h>
+#include <syslog.h>
 
 #include <acgi.h>
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+#include "git-package-version.h"
+
+
+///////////////////
+//               //
+//  Definitions  //
+//               //
+///////////////////
+
+#ifndef PROGRAM_NAME
+#   define PROGRAM_NAME "unknown"
+#endif
+#ifndef PACKAGE_NAME
+#   define PACKAGE_NAME "acgi"
+#endif
+#ifndef PACKAGE_BUGREPORT
+#   define PACKAGE_BUGREPORT ""
+#endif
+#ifndef PACKAGE_COPYRIGHT
+#   define PACKAGE_COPYRIGHT ""
+#endif
 
 
 //////////////////
@@ -54,14 +85,65 @@
 //              //
 //////////////////
 
+struct acgi_error
+{
+   int    errno;
+   char * errdebug;
+};
+
+
 struct acgi
 {
+   // errors
+   struct acgi_error error;
+
+   // general information
+   int              type;
+   size_t           transaction;
+
+   // listening sockets
+   struct pollfd  * fds;
+   size_t           fdslen;
+
+   // daemon options
+   const char     * pid_file;
+   int              fork;
+
+   // logging options
+   int             syslog_facility;
+   int             syslog_options;
+   const char    * syslog_ident;
+
+   // environment
+   int              argc;
+   char          ** argv;
+
+   // data hashes
+   ACGIHash       * envrion;
+   ACGIHash       * cookies;
+   ACGIHash       * get;
+   ACGIHash       * post;
 };
 
 
-struct acgi_session
-{
-};
+///////////////////
+//               //
+//  i18l Support //
+//               //
+///////////////////
+
+#ifdef HAVE_GETTEXT
+#   include <gettext.h>
+#   include <libintl.h>
+#   define _(String) gettext (String)
+#   define gettext_noop(String) String
+#   define N_(String) gettext_noop (String)
+#else
+#   define _(String) (String)
+#   define N_(String) String
+#   define textdomain(Domain)
+#   define bindtextdomain(Package, Directory)
+#endif
 
 
 #endif

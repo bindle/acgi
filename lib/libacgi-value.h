@@ -31,8 +31,12 @@
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
-#ifndef _ACGI_H
-#define _ACGI_H 1
+/**
+ *  Displays variables available to the CGIs.
+ */
+#ifndef _LIB_LIBACGI_VALUE_H
+#define _LIB_LIBACGI_VALUE_H 1
+
 
 ///////////////
 //           //
@@ -40,31 +44,7 @@
 //           //
 ///////////////
 
-#include <inttypes.h>
-
-
-///////////////////
-//               //
-//  Definitions  //
-//               //
-///////////////////
-
-// ACGI instance type
-#define ACGI_TYPE_UNKNOWN     -1
-#define ACGI_TYPE_CGI         1
-#define ACGI_TYPE_FCGI        2
-#define ACGI_TYPE_SCGI        3
-
-#define ACGI_DATA_ANY         0
-#define ACGI_DATA_POST        1
-#define ACGI_DATA_GET         2
-#define ACGI_DATA_COOKIE      3
-#define ACGI_DATA_ENVIRONMENT 4
-
-// ACGI Errors
-#define ACGI_CLOSED           -1
-#define ACGI_SUCCESS          0
-#define ACGI_NO_MEMORY        1
+#include "libacgi.h"
 
 
 //////////////////
@@ -73,11 +53,15 @@
 //              //
 //////////////////
 
-typedef struct acgi ACGI;
-typedef struct acgi_error ACGIError;
-typedef struct acgi_session ACGISession;
-typedef struct acgi_hash ACGIHash;
-typedef struct acgi_value ACGIValue;
+struct acgi_value
+{
+   size_t       type;
+   const char * key;
+   char       * name;
+   char       * data;
+   char       * data_encoded_html;
+   char       * data_encoded_url;
+};
 
 
 //////////////////
@@ -86,19 +70,15 @@ typedef struct acgi_value ACGIValue;
 //              //
 //////////////////
 
-// ACGI Master Descriptor
-int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-int acgi_free(ACGI * acgi);
-int acgi_initialize(ACGI ** acgip, int argc, char * argv[]);
-int acgi_type(ACGI * acgi);
+int  acgi_value_casecmp(const ACGIValue ** aa, const ACGIValue ** bb);
+int  acgi_value_cmp(const ACGIValue ** aa, const ACGIValue ** bb);
+const char * acgi_value_data(ACGIValue * val);
+const char * acgi_value_data_encoded_html(ACGIValue * val);
+const char * acgi_value_data_encoded_url(ACGIValue * val);
+void acgi_value_free(ACGIValue * varp);
+int  acgi_value_initialize(ACGIValue ** valp, ACGIHash * array,
+        const char * name, const char * data);
 
-// ACGI Session Descriptor
-//int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-//int acgi_session_free(ACGISession * sess);
-
-const char * acgi_err2str(int errcode);
-int acgi_errcode(ACGIError * err);
-#define acgi_errno(err) acgi_errcode((ACGIError *)err)
 
 #endif
 /* end of header */

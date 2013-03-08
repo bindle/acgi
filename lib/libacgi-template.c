@@ -31,8 +31,11 @@
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
-#ifndef _ACGI_H
-#define _ACGI_H 1
+/**
+ *  
+ */
+#include "libacgi-template.h"
+
 
 ///////////////
 //           //
@@ -40,65 +43,17 @@
 //           //
 ///////////////
 
-#include <inttypes.h>
+#include <stdio.h>
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
 
 
-///////////////////
-//               //
-//  Definitions  //
-//               //
-///////////////////
-
-// ACGI instance type
-#define ACGI_TYPE_UNKNOWN     -1
-#define ACGI_TYPE_CGI         1
-#define ACGI_TYPE_FCGI        2
-#define ACGI_TYPE_SCGI        3
-
-#define ACGI_DATA_ANY         0
-#define ACGI_DATA_POST        1
-#define ACGI_DATA_GET         2
-#define ACGI_DATA_COOKIE      3
-#define ACGI_DATA_ENVIRONMENT 4
-
-// ACGI Errors
-#define ACGI_CLOSED           -1
-#define ACGI_SUCCESS          0
-#define ACGI_NO_MEMORY        1
+/////////////////
+//             //
+//  Functions  //
+//             //
+/////////////////
 
 
-//////////////////
-//              //
-//  Data Types  //
-//              //
-//////////////////
-
-typedef struct acgi ACGI;
-typedef struct acgi_error ACGIError;
-typedef struct acgi_session ACGISession;
-typedef struct acgi_hash ACGIHash;
-typedef struct acgi_value ACGIValue;
-
-
-//////////////////
-//              //
-//  Prototypes  //
-//              //
-//////////////////
-
-// ACGI Master Descriptor
-int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-int acgi_free(ACGI * acgi);
-int acgi_initialize(ACGI ** acgip, int argc, char * argv[]);
-int acgi_type(ACGI * acgi);
-
-// ACGI Session Descriptor
-//int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-//int acgi_session_free(ACGISession * sess);
-
-const char * acgi_err2str(int errcode);
-int acgi_errcode(ACGIError * err);
-#define acgi_errno(err) acgi_errcode((ACGIError *)err)
-
-#endif
-/* end of header */
+/* end of source */

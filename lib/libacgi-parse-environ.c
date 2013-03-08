@@ -31,8 +31,11 @@
  *
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
-#ifndef _ACGI_H
-#define _ACGI_H 1
+/**
+ *
+ */
+#include "libacgi-parse-environ.h"
+
 
 ///////////////
 //           //
@@ -40,65 +43,83 @@
 //           //
 ///////////////
 
-#include <inttypes.h>
+#include <stdio.h>
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+
+#include "libacgi-error.h"
+#include "libacgi-hash.h"
+#include "libacgi-value.h"
 
 
-///////////////////
-//               //
-//  Definitions  //
-//               //
-///////////////////
+/////////////////
+//             //
+//  Functions  //
+//             //
+/////////////////
 
-// ACGI instance type
-#define ACGI_TYPE_UNKNOWN     -1
-#define ACGI_TYPE_CGI         1
-#define ACGI_TYPE_FCGI        2
-#define ACGI_TYPE_SCGI        3
+int acgi_parse_environ(ACGIError * err, ACGIHash ** hashp, char ** data)
+{
+   ACGIHash   * hash;
+   int          i;
+   char       * name;
+   char       * value;
+   char       * ptr;
+   ACGIValue  * val;
+   int          ret;
 
-#define ACGI_DATA_ANY         0
-#define ACGI_DATA_POST        1
-#define ACGI_DATA_GET         2
-#define ACGI_DATA_COOKIE      3
-#define ACGI_DATA_ENVIRONMENT 4
+   assert(err   != NULL);
+   assert(data  != NULL);
+   assert(hashp != NULL);
 
-// ACGI Errors
-#define ACGI_CLOSED           -1
-#define ACGI_SUCCESS          0
-#define ACGI_NO_MEMORY        1
+   *hashp = NULL;
+   if ((ret = acgi_hash_initialize(hashp, ACGI_DATA_ENVIRONMENT)) != ACGI_SUCCESS)
+   {
+      acgi_err_set(err, ret, NULL);
+      return(err->errno);
+   };
+   hash = *hashp;
+
+   for(i = 0; data[i]; i++)
+   {
+      val = NULL;
+
+      // copy string
+      if ((name = strdup(data[i])) == NULL)
+      {
+         acgi_err_set(err, ACGI_NO_MEMORY, NULL);
+         acgi_hash_free(*hashp);
+         *hashp = NULL;
+         return(err->errno);
+      };
+
+      // find delimiter
+      if ((ptr = index(name, '=')) == NULL)
+      {
+         free(name);
+         continue;
+      };
+      ptr[0] = '\0';
+      value  = &ptr[1];
+
+      // create new value
+      if ((ret = acgi_hash_add_new_value(hash, &val, NULL, name, value)) != ACGI_SUCCESS)
+      {
+         free(name);
+         acgi_err_set(err, ret, NULL);
+         acgi_hash_free(*hashp);
+         *hashp = NULL;
+         return(ret);
+      };
+
+      // frees resources
+      free(name);
+   };
+
+   return(ACGI_SUCCESS);
+}
 
 
-//////////////////
-//              //
-//  Data Types  //
-//              //
-//////////////////
-
-typedef struct acgi ACGI;
-typedef struct acgi_error ACGIError;
-typedef struct acgi_session ACGISession;
-typedef struct acgi_hash ACGIHash;
-typedef struct acgi_value ACGIValue;
-
-
-//////////////////
-//              //
-//  Prototypes  //
-//              //
-//////////////////
-
-// ACGI Master Descriptor
-int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-int acgi_free(ACGI * acgi);
-int acgi_initialize(ACGI ** acgip, int argc, char * argv[]);
-int acgi_type(ACGI * acgi);
-
-// ACGI Session Descriptor
-//int acgi_accept(ACGI * acgi, ACGISession ** sessp);
-//int acgi_session_free(ACGISession * sess);
-
-const char * acgi_err2str(int errcode);
-int acgi_errcode(ACGIError * err);
-#define acgi_errno(err) acgi_errcode((ACGIError *)err)
-
-#endif
-/* end of header */
+/* end of source */

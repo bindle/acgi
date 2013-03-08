@@ -32,8 +32,26 @@
  *  @BINDLE_BINARIES_BSD_LICENSE_END@
  */
 /**
- *  Displays variables available to the CGIs.
+ *  
  */
+#ifndef _LIB_LIBACGI_POLL_FCGI_H
+#define _LIB_LIBACGI_POLL_FCGI_H 1
 
 
+///////////////
+//           //
+//  Headers  //
+//           //
+///////////////
+
+#include "libacgi.h"
+
+
+//////////////////
+//              //
+//  Prototypes  //
+//              //
+//////////////////
+
+#endif
 /* end of header */

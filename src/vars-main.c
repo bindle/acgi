@@ -71,6 +71,7 @@
 #include <time.h>
 #include <errno.h>
 
+#include <acgi.h>
 
 //////////////////
 //              //
@@ -144,6 +145,8 @@ CGI * cgi_initialize(void);
 CGIARRAY * cgi_initialize_array(int type);
 CGIVAR * cgi_initialize_variable(const char * name, const char * value, CGIARRAY * arrayp);
 const char * html_unsafe_printf(char * dst, const char * src, size_t len);
+
+int main(int argc, char * argv[]);
 
 
 /////////////////
@@ -709,8 +712,9 @@ const char * html_unsafe_printf(char * dst, const char * src, size_t len)
 }
 
 
-int main(void)
+int main(int argc, char * argv[])
 {
+   ACGI         * cgi;
    const char   * namep;
    const char   * valuep;
    char           name[1024];
@@ -720,6 +724,12 @@ int main(void)
    int            i;
    const char  ** keys;
    CGI          * cgip;
+
+   if ((acgi_initialize(&cgi, argc, argv)) != ACGI_SUCCESS)
+   {
+      perror("acgi_initialize()");
+      return(1);
+   };
 
    if ((cgip = cgi_initialize()) == NULL)
    {

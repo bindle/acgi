@@ -21,9 +21,33 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A018868116E923A800FF5163 /* libacgi-hash.c in Sources */ = {isa = PBXBuildFile; fileRef = A018868016E923A800FF5163 /* libacgi-hash.c */; };
+		A018868316E923BB00FF5163 /* libacgi-hash.h in Headers */ = {isa = PBXBuildFile; fileRef = A018868216E923BB00FF5163 /* libacgi-hash.h */; };
+		A018868516E923D000FF5163 /* libacgi-value.h in Headers */ = {isa = PBXBuildFile; fileRef = A018868416E923D000FF5163 /* libacgi-value.h */; };
+		A018868716E923DD00FF5163 /* libacgi-value.c in Sources */ = {isa = PBXBuildFile; fileRef = A018868616E923DD00FF5163 /* libacgi-value.c */; };
+		A018868916E9263500FF5163 /* libacgi-string.c in Sources */ = {isa = PBXBuildFile; fileRef = A018868816E9263500FF5163 /* libacgi-string.c */; };
+		A018868B16E9264900FF5163 /* libacgi-string.h in Headers */ = {isa = PBXBuildFile; fileRef = A018868A16E9264900FF5163 /* libacgi-string.h */; };
+		A018868D16E9288A00FF5163 /* libacgi-error.h in Headers */ = {isa = PBXBuildFile; fileRef = A018868C16E9288A00FF5163 /* libacgi-error.h */; };
+		A018868F16E9289700FF5163 /* libacgi-error.c in Sources */ = {isa = PBXBuildFile; fileRef = A018868E16E9289700FF5163 /* libacgi-error.c */; };
+		A032719B16E9453B00B19C05 /* libacgi-parse-environ.c in Sources */ = {isa = PBXBuildFile; fileRef = A032719A16E9453B00B19C05 /* libacgi-parse-environ.c */; };
+		A032719D16E9454700B19C05 /* libacgi-parse-environ.h in Headers */ = {isa = PBXBuildFile; fileRef = A032719C16E9454700B19C05 /* libacgi-parse-environ.h */; };
+		A032719F16E962A900B19C05 /* libacgi-session.h in Headers */ = {isa = PBXBuildFile; fileRef = A032719E16E962A900B19C05 /* libacgi-session.h */; };
+		A03271A116E962B900B19C05 /* libacgi-session.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271A016E962B900B19C05 /* libacgi-session.c */; };
+		A03271A416E96F5100B19C05 /* libacgi-parse-argv.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271A316E96F5100B19C05 /* libacgi-parse-argv.c */; };
+		A03271AC16E976EF00B19C05 /* libacgi-parse-cookies.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271A616E976EE00B19C05 /* libacgi-parse-cookies.c */; };
+		A03271AD16E976EF00B19C05 /* libacgi-parse-cookies.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271A716E976EE00B19C05 /* libacgi-parse-cookies.h */; };
+		A03271AE16E976EF00B19C05 /* libacgi-parse-get.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271A816E976EE00B19C05 /* libacgi-parse-get.c */; };
+		A03271AF16E976EF00B19C05 /* libacgi-parse-get.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271A916E976EE00B19C05 /* libacgi-parse-get.h */; };
+		A03271B016E976EF00B19C05 /* libacgi-parse-post.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271AA16E976EE00B19C05 /* libacgi-parse-post.c */; };
+		A03271B116E976EF00B19C05 /* libacgi-parse-post.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271AB16E976EE00B19C05 /* libacgi-parse-post.h */; };
+		A03271BA16E97C6B00B19C05 /* libacgi-poll-cgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271B216E97C6A00B19C05 /* libacgi-poll-cgi.c */; };
+		A03271BB16E97C6B00B19C05 /* libacgi-poll-cgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271B316E97C6A00B19C05 /* libacgi-poll-cgi.h */; };
+		A03271BC16E97C6B00B19C05 /* libacgi-poll-fcgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271B416E97C6A00B19C05 /* libacgi-poll-fcgi.c */; };
+		A03271BD16E97C6B00B19C05 /* libacgi-poll-fcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271B516E97C6A00B19C05 /* libacgi-poll-fcgi.h */; };
+		A03271BE16E97C6B00B19C05 /* libacgi-poll-scgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A03271B616E97C6A00B19C05 /* libacgi-poll-scgi.c */; };
+		A03271BF16E97C6B00B19C05 /* libacgi-poll-scgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A03271B716E97C6B00B19C05 /* libacgi-poll-scgi.h */; };
 		A033ADE916E708E100753107 /* test-fcgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A033ADDB16E708A600753107 /* test-fcgi.c */; };
-		A0E0C7F616E6DEF9001728FB /* libacgi-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */; };
-		A0E0C7F716E6DEF9001728FB /* libacgi-memory.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */; };
+		A0E0C7F616E6DEF9001728FB /* libacgi.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C7F316E6DEF9001728FB /* libacgi.c */; };
 		A0E0C7F816E6DEF9001728FB /* libacgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7F516E6DEF9001728FB /* libacgi.h */; };
 		A0E0C7FC16E6E0B1001728FB /* acgi.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E0C7FB16E6E0B1001728FB /* acgi.h */; };
 /* End PBXBuildFile section */
@@ -67,6 +91,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A018868016E923A800FF5163 /* libacgi-hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-hash.c"; sourceTree = "<group>"; };
+		A018868216E923BB00FF5163 /* libacgi-hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-hash.h"; sourceTree = "<group>"; };
+		A018868416E923D000FF5163 /* libacgi-value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-value.h"; sourceTree = "<group>"; };
+		A018868616E923DD00FF5163 /* libacgi-value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-value.c"; sourceTree = "<group>"; };
+		A018868816E9263500FF5163 /* libacgi-string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-string.c"; sourceTree = "<group>"; };
+		A018868A16E9264900FF5163 /* libacgi-string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-string.h"; sourceTree = "<group>"; };
+		A018868C16E9288A00FF5163 /* libacgi-error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-error.h"; sourceTree = "<group>"; };
+		A018868E16E9289700FF5163 /* libacgi-error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-error.c"; sourceTree = "<group>"; };
+		A032719A16E9453B00B19C05 /* libacgi-parse-environ.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-parse-environ.c"; sourceTree = "<group>"; };
+		A032719C16E9454700B19C05 /* libacgi-parse-environ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-parse-environ.h"; sourceTree = "<group>"; };
+		A032719E16E962A900B19C05 /* libacgi-session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-session.h"; sourceTree = "<group>"; };
+		A03271A016E962B900B19C05 /* libacgi-session.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-session.c"; sourceTree = "<group>"; };
+		A03271A316E96F5100B19C05 /* libacgi-parse-argv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-parse-argv.c"; sourceTree = "<group>"; };
+		A03271A516E96F6C00B19C05 /* libacgi-parse-argv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libacgi-parse-argv.h"; sourceTree = "<group>"; };
+		A03271A616E976EE00B19C05 /* libacgi-parse-cookies.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-parse-cookies.c"; sourceTree = "<group>"; };
+		A03271A716E976EE00B19C05 /* libacgi-parse-cookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-parse-cookies.h"; sourceTree = "<group>"; };
+		A03271A816E976EE00B19C05 /* libacgi-parse-get.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-parse-get.c"; sourceTree = "<group>"; };
+		A03271A916E976EE00B19C05 /* libacgi-parse-get.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-parse-get.h"; sourceTree = "<group>"; };
+		A03271AA16E976EE00B19C05 /* libacgi-parse-post.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-parse-post.c"; sourceTree = "<group>"; };
+		A03271AB16E976EE00B19C05 /* libacgi-parse-post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-parse-post.h"; sourceTree = "<group>"; };
+		A03271B216E97C6A00B19C05 /* libacgi-poll-cgi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-poll-cgi.c"; sourceTree = "<group>"; };
+		A03271B316E97C6A00B19C05 /* libacgi-poll-cgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-poll-cgi.h"; sourceTree = "<group>"; };
+		A03271B416E97C6A00B19C05 /* libacgi-poll-fcgi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-poll-fcgi.c"; sourceTree = "<group>"; };
+		A03271B516E97C6A00B19C05 /* libacgi-poll-fcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-poll-fcgi.h"; sourceTree = "<group>"; };
+		A03271B616E97C6A00B19C05 /* libacgi-poll-scgi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-poll-scgi.c"; sourceTree = "<group>"; };
+		A03271B716E97C6B00B19C05 /* libacgi-poll-scgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-poll-scgi.h"; sourceTree = "<group>"; };
+		A03271B816E97C6B00B19C05 /* libacgi-template.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-template.c"; sourceTree = "<group>"; };
+		A03271B916E97C6B00B19C05 /* libacgi-template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-template.h"; sourceTree = "<group>"; };
 		A033ADDB16E708A600753107 /* test-fcgi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fcgi.c"; sourceTree = "<group>"; };
 		A033ADE016E708C200753107 /* test.fcgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test.fcgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7A516E6D6AB001728FB /* libacgi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacgi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,8 +135,7 @@
 		A0E0C7CE16E6D7BC001728FB /* vars-main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "vars-main.c"; sourceTree = "<group>"; };
 		A0E0C7D616E6D9FA001728FB /* vars.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vars.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E0C7E216E6DA2F001728FB /* bindletools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bindletools.xcodeproj; path = bindletools/bindletools.xcodeproj; sourceTree = "<group>"; };
-		A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libacgi-memory.c"; sourceTree = "<group>"; };
-		A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libacgi-memory.h"; sourceTree = "<group>"; };
+		A0E0C7F316E6DEF9001728FB /* libacgi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libacgi.c; sourceTree = "<group>"; };
 		A0E0C7F516E6DEF9001728FB /* libacgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libacgi.h; sourceTree = "<group>"; };
 		A0E0C7FA16E6DF82001728FB /* libacgi.sym */ = {isa = PBXFileReference; explicitFileType = text.script; fileEncoding = 4; path = libacgi.sym; sourceTree = "<group>"; };
 		A0E0C7FB16E6E0B1001728FB /* acgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = acgi.h; sourceTree = "<group>"; };
@@ -199,8 +250,35 @@
 			children = (
 				A0E0C7FA16E6DF82001728FB /* libacgi.sym */,
 				A0E0C7F516E6DEF9001728FB /* libacgi.h */,
-				A0E0C7F316E6DEF9001728FB /* libacgi-memory.c */,
-				A0E0C7F416E6DEF9001728FB /* libacgi-memory.h */,
+				A0E0C7F316E6DEF9001728FB /* libacgi.c */,
+				A018868E16E9289700FF5163 /* libacgi-error.c */,
+				A018868C16E9288A00FF5163 /* libacgi-error.h */,
+				A018868016E923A800FF5163 /* libacgi-hash.c */,
+				A018868216E923BB00FF5163 /* libacgi-hash.h */,
+				A03271A316E96F5100B19C05 /* libacgi-parse-argv.c */,
+				A03271A516E96F6C00B19C05 /* libacgi-parse-argv.h */,
+				A03271A616E976EE00B19C05 /* libacgi-parse-cookies.c */,
+				A03271A716E976EE00B19C05 /* libacgi-parse-cookies.h */,
+				A032719A16E9453B00B19C05 /* libacgi-parse-environ.c */,
+				A032719C16E9454700B19C05 /* libacgi-parse-environ.h */,
+				A03271A816E976EE00B19C05 /* libacgi-parse-get.c */,
+				A03271A916E976EE00B19C05 /* libacgi-parse-get.h */,
+				A03271AA16E976EE00B19C05 /* libacgi-parse-post.c */,
+				A03271AB16E976EE00B19C05 /* libacgi-parse-post.h */,
+				A03271B216E97C6A00B19C05 /* libacgi-poll-cgi.c */,
+				A03271B316E97C6A00B19C05 /* libacgi-poll-cgi.h */,
+				A03271B416E97C6A00B19C05 /* libacgi-poll-fcgi.c */,
+				A03271B516E97C6A00B19C05 /* libacgi-poll-fcgi.h */,
+				A03271B616E97C6A00B19C05 /* libacgi-poll-scgi.c */,
+				A03271B716E97C6B00B19C05 /* libacgi-poll-scgi.h */,
+				A03271A016E962B900B19C05 /* libacgi-session.c */,
+				A032719E16E962A900B19C05 /* libacgi-session.h */,
+				A018868816E9263500FF5163 /* libacgi-string.c */,
+				A018868A16E9264900FF5163 /* libacgi-string.h */,
+				A03271B816E97C6B00B19C05 /* libacgi-template.c */,
+				A03271B916E97C6B00B19C05 /* libacgi-template.h */,
+				A018868616E923DD00FF5163 /* libacgi-value.c */,
+				A018868416E923D000FF5163 /* libacgi-value.h */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -212,9 +290,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E0C7F716E6DEF9001728FB /* libacgi-memory.h in Headers */,
 				A0E0C7F816E6DEF9001728FB /* libacgi.h in Headers */,
 				A0E0C7FC16E6E0B1001728FB /* acgi.h in Headers */,
+				A018868316E923BB00FF5163 /* libacgi-hash.h in Headers */,
+				A018868516E923D000FF5163 /* libacgi-value.h in Headers */,
+				A018868B16E9264900FF5163 /* libacgi-string.h in Headers */,
+				A018868D16E9288A00FF5163 /* libacgi-error.h in Headers */,
+				A032719D16E9454700B19C05 /* libacgi-parse-environ.h in Headers */,
+				A032719F16E962A900B19C05 /* libacgi-session.h in Headers */,
+				A03271AD16E976EF00B19C05 /* libacgi-parse-cookies.h in Headers */,
+				A03271AF16E976EF00B19C05 /* libacgi-parse-get.h in Headers */,
+				A03271B116E976EF00B19C05 /* libacgi-parse-post.h in Headers */,
+				A03271BB16E97C6B00B19C05 /* libacgi-poll-cgi.h in Headers */,
+				A03271BD16E97C6B00B19C05 /* libacgi-poll-fcgi.h in Headers */,
+				A03271BF16E97C6B00B19C05 /* libacgi-poll-scgi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +428,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E0C7F616E6DEF9001728FB /* libacgi-memory.c in Sources */,
+				A0E0C7F616E6DEF9001728FB /* libacgi.c in Sources */,
+				A018868116E923A800FF5163 /* libacgi-hash.c in Sources */,
+				A018868716E923DD00FF5163 /* libacgi-value.c in Sources */,
+				A018868916E9263500FF5163 /* libacgi-string.c in Sources */,
+				A018868F16E9289700FF5163 /* libacgi-error.c in Sources */,
+				A032719B16E9453B00B19C05 /* libacgi-parse-environ.c in Sources */,
+				A03271A116E962B900B19C05 /* libacgi-session.c in Sources */,
+				A03271A416E96F5100B19C05 /* libacgi-parse-argv.c in Sources */,
+				A03271AC16E976EF00B19C05 /* libacgi-parse-cookies.c in Sources */,
+				A03271AE16E976EF00B19C05 /* libacgi-parse-get.c in Sources */,
+				A03271B016E976EF00B19C05 /* libacgi-parse-post.c in Sources */,
+				A03271BA16E97C6B00B19C05 /* libacgi-poll-cgi.c in Sources */,
+				A03271BC16E97C6B00B19C05 /* libacgi-poll-fcgi.c in Sources */,
+				A03271BE16E97C6B00B19C05 /* libacgi-poll-scgi.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +597,7 @@
 				A033ADE816E708C200753107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0E0C7A016E6D6AB001728FB /* Build configuration list for PBXProject "acgi" */ = {
 			isa = XCConfigurationList;
